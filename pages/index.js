@@ -1,18 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-
-// import static images
-import IllustrationWorking from "../public/assets/images/illustration-working.svg";
-import BrandRecognitionIcon from "../public/assets/images/icon-brand-recognition.svg";
-import DetailedRecordsIcon from "../public/assets/images/icon-detailed-records.svg";
-import FullyCustomizableIcon from "../public/assets/images/icon-fully-customizable.svg";
-import TwitterIcon from "../public/assets/images/icon-twitter.svg";
-import FacebookIcon from "../public/assets/images/icon-facebook.svg";
-import PinterestIcon from "../public/assets/images/icon-pinterest.svg";
-import InstagramIcon from "../public/assets/images/icon-instagram.svg";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -38,6 +27,7 @@ export default function Home() {
         .then((data) => {
           if (data.ok) {
             setShortLink(data.result.full_short_link);
+            console.log(data);
           } else {
             setShortLink("Not available");
           }
@@ -171,8 +161,12 @@ export default function Home() {
                   Get Started
                 </button>
               </div>
-              <div className="flex-1 block mb-10 lg:my-0">
-                <Image src={IllustrationWorking} alt="Ilustration working" />
+              <div className="flex-1 block mb-10 lg:my-0 relative">
+                <img
+                  src="./assets/images/illustration-working.svg"
+                  alt="Ilustration working"
+                  className="relative -right-10 lg:right-0"
+                />
               </div>
             </div>
           </div>
@@ -248,7 +242,10 @@ export default function Home() {
               <div className="flex relative z-10 flex-col lg:flex-row">
                 <div className="w-full bg-white rounded-lg px-5 pb-10 relative mt-20">
                   <div className="bg-darkblue rounded-full flex justify-center items-center p-5 w-max relative mx-auto -top-11 lg:m-0 lg:mx-0">
-                    <Image src={BrandRecognitionIcon} alt="brand recognition" />
+                    <img
+                      src="./assets/images/icon-brand-recognition.svg"
+                      alt="Brand recognition"
+                    />
                   </div>
                   <p className="text-2xl font-bold text-primary-dark text-center lg:text-left">
                     Brand Recognition
@@ -261,7 +258,10 @@ export default function Home() {
                 </div>
                 <div className="w-full bg-white rounded-lg px-5 pb-10 relative mt-20 lg:mx-10 lg:transform lg:translate-y-10">
                   <div className="bg-darkblue rounded-full flex justify-center items-center p-5 w-max relative mx-auto -top-11 lg:m-0 lg:mx-0">
-                    <Image src={DetailedRecordsIcon} alt="detailed records" />
+                    <img
+                      src="./assets/images/icon-detailed-records.svg"
+                      alt="Detailed records"
+                    />
                   </div>
                   <p className="text-2xl font-bold text-primary-dark text-center lg:text-left">
                     Detailed Records
@@ -274,9 +274,9 @@ export default function Home() {
                 </div>
                 <div className="w-full bg-white rounded-lg px-5 pb-10 relative mt-20 lg:transform lg:translate-y-20">
                   <div className="bg-darkblue rounded-full flex justify-center items-center p-5 w-max relative mx-auto -top-11 lg:m-0 lg:mx-0">
-                    <Image
-                      src={FullyCustomizableIcon}
-                      alt="fully customizable"
+                    <img
+                      src="./assets/images/icon-fully-customizable.svg"
+                      alt="Fully customizable"
                     />
                   </div>
                   <p className="text-2xl font-bold text-primary-dark text-center lg:text-left">
@@ -389,40 +389,26 @@ export default function Home() {
 
               <div className="flex justify-center mt-10 lg:mt-0 lg:flex-1">
                 <a href="#" className="w-max mx-3">
-                  <Image
-                    src={FacebookIcon}
-                    alt="facebook"
-                    width="23"
-                    height="23"
-                    layout="fixed"
-                  ></Image>
+                  <img src="./assets/images/icon-facebook.svg" alt="Facebook" />
                 </a>
-                <div className="block w-max mx-3">
-                  <Image
-                    src={TwitterIcon}
-                    alt="twitter"
-                    width="25"
-                    height="23"
-                    layout="fixed"
-                  ></Image>
-                </div>
-                <a href="#" className="w-max mx-3">
-                  <Image
-                    src={InstagramIcon}
-                    alt="pinterest"
-                    width="23"
-                    height="23"
-                    layout="fixed"
-                  ></Image>
+                <a href="#" className="block w-max mx-3">
+                  <img
+                    src="./assets/images/icon-twitter.svg"
+                    alt="Twitter"
+                    className="h-6"
+                  />
                 </a>
                 <a href="#" className="w-max mx-3">
-                  <Image
-                    src={PinterestIcon}
-                    alt="instagram"
-                    width="23"
-                    height="23"
-                    layout="fixed"
-                  ></Image>
+                  <img
+                    src="./assets/images/icon-pinterest.svg"
+                    alt="Pinterest"
+                  />
+                </a>
+                <a href="#" className="w-max mx-3">
+                  <img
+                    src="./assets/images/icon-instagram.svg"
+                    alt="Instagram"
+                  />
                 </a>
               </div>
             </div>
