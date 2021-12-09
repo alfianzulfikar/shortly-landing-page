@@ -21,11 +21,12 @@ The challenge is to build out the landing page, integrate with the [shrtcode API
 ### Screenshot
 
 ![](./public/screenshot.jpeg)
+
 ![](./public/screenshot-mobile.jpeg)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://shortly-az.netlify.app/)
+- Live Site URL: [https://shortly-az.netlify.app](https://shortly-az.netlify.app/)
 
 ## My process
 
