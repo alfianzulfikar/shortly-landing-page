@@ -147,12 +147,12 @@ export default function Home() {
           <div className="bg-white px-5 py-10">
             <div className="container mx-auto relative flex flex-col-reverse lg:flex-row lg:mb-20">
               <div className="w-full flex-1 flex flex-col items-center lg:items-start">
-                <p
+                <h1
                   className="text-4xl lg:text-5xl text-center font-bold lg:text-left text-primary-dark mt-5"
                   style={{ lineHeight: 1.2 }}
                 >
                   More than just shorter links
-                </p>
+                </h1>
                 <p className="text-center lg:text-left text-xl font-medium text-neutral-grayishviolet mt-3">
                   Build your brand's recognition and get detailed insights on
                   how your links are performing.
@@ -232,9 +232,9 @@ export default function Home() {
                 )}
               </div>
 
-              <p className="text-3xl font-bold text-primary-dark text-center">
+              <h2 className="text-3xl font-bold text-primary-dark text-center">
                 Advanced Statistic
-              </p>
+              </h2>
               <p className="text-center text-lg lg:w-1/3 font-medium text-neutral-grayishviolet mt-5 mx-auto">
                 Track how your links are performing across the web with our
                 advanced statistic dashboard.
@@ -294,9 +294,9 @@ export default function Home() {
 
           <div className="bg-darkblue">
             <div className="bg-boost-mobile lg:bg-boost-desktop bg-no-repeat bg-right py-20 flex flex-col">
-              <p className="text-2xl font-bold text-white text-center">
+              <h2 className="text-3xl font-bold text-white text-center">
                 Boost your links today
-              </p>
+              </h2>
               <button className="border-none bg-primary text-white p-2 px-5 rounded-full mt-3 mx-auto hover:bg-hoverprimary">
                 Get Started
               </button>
