@@ -27,7 +27,6 @@ export default function Home() {
         .then((data) => {
           if (data.ok) {
             setShortLink(data.result.full_short_link);
-            console.log(data);
           } else {
             setShortLink("Not available");
           }
